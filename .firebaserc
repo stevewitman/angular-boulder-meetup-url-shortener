@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angular-boulder-meetup": {
+      "hosting": {
+        "angular-boulder-meetup-url-shortener": [
+          "angular-boulder-meetup"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angular-boulder-meetup"
+  }
+}

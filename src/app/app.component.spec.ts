@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-url-shortener'`, () => {
+  it(`should have as title 'angular-boulder-meetup-url-shortener'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-url-shortener');
+    expect(app.title).toEqual('angular-boulder-meetup-url-shortener');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-url-shortener app is running!');
+    expect(compiled.querySelector('.content span')?.textContent).toContain('angular-boulder-meetup-url-shortener app is running!');
   });
 });

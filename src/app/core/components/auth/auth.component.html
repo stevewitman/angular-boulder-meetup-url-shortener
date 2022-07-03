@@ -1,0 +1,15 @@
+<!-- SIGNED IN -->
+<div *ngIf="userAuthStatus$ | async">
+  <img [src]="(userAuthStatus$ | async)?.photoURL" [matMenuTriggerFor]="menuSignedIn">
+  <mat-menu #menuSignedIn="matMenu">
+    <button mat-menu-item (click)="signOutWithGoogle()">Sign Out</button>
+  </mat-menu>
+</div>
+
+<!-- NOT SIGNED IN -->
+<div *ngIf="(userAuthStatus$ | async) === null">
+  <mat-icon [matMenuTriggerFor]="menuSignedOut" class="handset-person-icon">person_outline</mat-icon>
+  <mat-menu #menuSignedOut="matMenu">
+    <button mat-menu-item (click)="signInWithGoogle()">Sign In With Google</button>
+  </mat-menu>
+</div>
