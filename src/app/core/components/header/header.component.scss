@@ -1,15 +1,55 @@
+.toolbar-talk {
+  background-color: #444444;
+}
 
-
+.talk-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  height: 2rem;
+  position: relative;
+  bottom: 1px;
+  letter-spacing: 2px;
+}
 .toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding-left: 0px;
-  height: 54px;
+  height: 4rem;
+  background-color: #1E75D2;
+  color: white;
 }
-.app-name {
+
+.group-left {
+  display: flex;
+  flex-direction: row;
+  height: 4rem;
+}
+
+.logo-image {
+  display: flex;
+  // justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 2.5rem;
+  cursor: pointer;
   position: relative;
-  bottom: -2px;
+  bottom: 1px;
+  img {
+    height: 2rem;
+  }
+}
+
+.logo-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  // font-size: 1.5rem;
+  position: relative;
+  bottom: 1px;
 }
 
 

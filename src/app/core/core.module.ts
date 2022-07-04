@@ -11,10 +11,10 @@ import { ShellComponent } from './components/shell/shell.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavMainComponent } from './components/nav-main/nav-main.component';
 import { AuthComponent } from './components/auth/auth.component';
-
+import { NotAuthorizedComponent } from './components/not-authorized/not-authorized.component';
 
 @NgModule({
-  declarations: [HeaderComponent, ShellComponent, NavMainComponent, AuthComponent],
+  declarations: [HeaderComponent, ShellComponent, NavMainComponent, AuthComponent, NotAuthorizedComponent],
   imports: [
     CommonModule,
     RouterModule,
@@ -23,6 +23,6 @@ import { AuthComponent } from './components/auth/auth.component';
     MatIconModule,
     MatToolbarModule,
   ],
-  exports: [ShellComponent],
+  exports: [ShellComponent, NotAuthorizedComponent],
 })
 export class CoreModule {}

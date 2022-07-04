@@ -11,6 +11,7 @@ import {
   User,
 } from '@angular/fire/auth';
 import { Observable, of } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root',
@@ -18,7 +19,11 @@ import { Observable, of } from 'rxjs';
 export class AuthService {
   userAuthState$: Observable<User | null> = of(null);
 
-  constructor(private auth: Auth, private firestore: Firestore) {
+  constructor(
+    private auth: Auth,
+    private firestore: Firestore,
+    private router: Router
+  ) {
     this.userAuthState$ = authState(this.auth);
   }
 
@@ -56,6 +61,10 @@ export class AuthService {
     await signOut(auth)
       .then(() => {
         console.log('Signed Out With Google');
+        if (this.router.url === '/short') {
+          // If on protected route ... navigate to Home Page         
+          this.router.navigate(['/home']);
+        } 
       })
       .catch((error) => {
         console.log('ERROR occurred while Signing Out With Google...');

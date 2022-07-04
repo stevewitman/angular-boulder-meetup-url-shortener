@@ -1,7 +1,16 @@
-img {
-  margin-top: 10px;
-  height: 36px;
-  width: 36px;
+.auth-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.avatar {
+  margin-top: 2px;
+  height: 2.5rem;
+  width: 2.5rem;
   border: 1px solid white;
   border-radius: 50%;
   cursor: pointer;
@@ -11,10 +20,4 @@ img {
   background-color: #252525;
   color: #EEE;
   border: 1px solid #EEE;
-}
-
-.handset-person-icon {
-  margin-top: 8px;
-  color: #EEE;
-  cursor: pointer;
 }

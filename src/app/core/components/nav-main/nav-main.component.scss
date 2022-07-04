@@ -1,5 +1,18 @@
-:host {
+.menu-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+}
+
+.menu-icon {
   position: relative;
   bottom: 2px;
-  padding:0.5rem;
+  // transform: scale(1.5);
+}
+
+.route-restricted {
+  color: silver;
 }

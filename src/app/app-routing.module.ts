@@ -1,8 +1,14 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { NotAuthorizedComponent } from './core/components/not-authorized/not-authorized.component';
+import { AuthGuard } from './core/guards/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
+  {
+    path: 'not-authorized',
+    component: NotAuthorizedComponent
+  },
   {
     path: 'home',
     loadChildren: () =>
@@ -12,6 +18,7 @@ const routes: Routes = [
     path: 'short',
     loadChildren: () =>
       import('./features/short/short.module').then((m) => m.ShortModule),
+    canActivate: [AuthGuard],
   },
   {
     path: '**',
